@@ -7,7 +7,7 @@ PLATFORM ?= linux/arm64
 all: build
 
 build:
-	docker build . --pull \
+	docker build . --pull --no-cache \
 		--platform $(PLATFORM) \
 		--build-arg DEBIAN_VERSION=$(DEBIAN_VERSION) \
 		--tag $(REPO)/$(IMAGE):$(TAG)

@@ -28,4 +28,4 @@ RUN apt-get update && \
         deepview-rt-python \
         libvaal \
         vaal-python \
-        && rm -rf /var/lib/apt/lists/*
+        && rm -rf /var/cache/apt/archives
