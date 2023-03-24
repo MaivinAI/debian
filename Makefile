@@ -8,7 +8,7 @@ all: build
 
 build:
 	docker build . --pull --no-cache \
-		--platform $(PLATFORM) \
+		--build-arg PLATFORM=$(PLATFORM) \
 		--build-arg DEBIAN=$(DEBIAN) \
 		--tag $(REPO)/$(IMAGE):$(TAG)
 
