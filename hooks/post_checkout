@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# curl -O https://github.com/multiarch/qemu-user-static/releases/download/v7.2.0-1/qemu-aarch64-static
-# chmod +x qemu-aarch64-static
-

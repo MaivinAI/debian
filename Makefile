@@ -1,5 +1,5 @@
-DEBIAN ?= bullseye
-TAG ?= bullseye
+DEBIAN ?= bookworm
+TAG ?= bookworm
 IMAGE ?= debian
 REPO ?= docker.au-zone.com/maivin
 PLATFORM ?= arm64v8
