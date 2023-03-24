@@ -2,7 +2,7 @@ DEBIAN ?= bullseye
 TAG ?= bullseye
 IMAGE ?= debian
 REPO ?= docker.au-zone.com/maivin
-PLATFORM ?= linux/arm64
+PLATFORM ?= arm64v8
 
 all: build
 
