@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 ARG DEBIAN=bullseye
 ARG PLATFORM=linux/arm64/v8
 ARG TORADEX_FEED_BASE_URL="https://feeds.toradex.com/debian"

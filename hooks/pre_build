@@ -1,2 +1,7 @@
 #!/bin/sh
-docker run --rm --privileged multiarch/qemu-user-static:register --reset
+#docker run --rm --privileged multiarch/qemu-user-static:register --reset
+docker run --privileged --rm tonistiigi/binfmt --install all
+
+ls -l
+cat /proc/sys/fs/binfmt_misc/status
+cat /proc/sys/fs/binfmt_misc/qemu-aarch64 
