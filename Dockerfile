@@ -1,21 +1,18 @@
 # syntax=docker/dockerfile:1
 
 ARG DEBIAN=bullseye
-ARG PLATFORM=arm64v8
+ARG PLATFORM=linux/arm64/v8
 ARG TORADEX_FEED_BASE_URL="https://feeds.toradex.com/debian"
 ARG TORADEX_SNAPSHOT=20220512T021145Z
 ARG USE_TORADEX_SNAPSHOT=1
 
-FROM ${PLATFORM}/debian:${DEBIAN}
+FROM --platform=${PLATFORM} debian:${DEBIAN}
 ARG TORADEX_SNAPSHOT
 ARG USE_TORADEX_SNAPSHOT
 ARG TORADEX_FEED_BASE_URL
 ARG DEBIAN_FRONTEND=noninteractive
 
 ENV LC_ALL C.UTF-8
-
-# Required to enable cross-architecture builds on Docker Hub.
-# COPY qemu-aarch64-static /usr/bin/
 
 # Create 01_nodoc to disable installation of docs inside docker containers.
 COPY 01_nodoc /etc/dpkg/dpkg.cfg.d/01_nodoc
